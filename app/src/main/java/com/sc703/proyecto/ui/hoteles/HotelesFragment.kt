@@ -22,34 +22,34 @@ import java.io.IOException
 
 class HotelesFragment : Fragment() {
 
-    lateinit var txt_realtime: TextView
-    private val FBDB = FirebaseDatabase.getInstance()
-    private val DBref = FBDB.reference
-    private val Noticias = DBref.child("Hotel1")
-
-    override fun onCreateView(
-        inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?): View? {
-        val root = inflater.inflate(R.layout.fragment_hoteles,container,false)
-
-        txt_realtime = root.findViewById(R.id.txt_realtime)
-
-        return root
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-        //Utilizamos el evento listener de nuestra noticia para ver si se modifica su valor
-        Noticias.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                txt_realtime.text = snapshot.value.toString()
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                txt_realtime.text = "Se produjo un error en la conexion a la BD"
-            }
-
-        })
-    }
+//    lateinit var txt_realtime: TextView
+//    private val FBDB = FirebaseDatabase.getInstance()
+//    private val DBref = FBDB.reference
+//    private val Noticias = DBref.child("Hotel1")
+//
+//    override fun onCreateView(
+//        inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?): View? {
+//        val root = inflater.inflate(R.layout.fragment_hoteles,container,false)
+//
+//        txt_realtime = root.findViewById(R.id.txt_realtime)
+//
+//        return root
+//    }
+//
+//    override fun onStart() {
+//        super.onStart()
+//
+//        //Utilizamos el evento listener de nuestra noticia para ver si se modifica su valor
+//        Noticias.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                txt_realtime.text = " hola " + snapshot.value.toString()
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//                txt_realtime.text = "Se produjo un error en la conexion a la BD"
+//            }
+//
+//        })
+//    }
 
 }

@@ -12,6 +12,12 @@
         tools:layout="@layout/fragment_hoteles" />
 
     <fragment
+        android:id="@+id/nav_soporte"
+        android:name="com.sc703.proyecto.ui.soporte.SoporteFragment"
+        android:label="@string/menu_soporte"
+        tools:layout="@layout/fragment_soporte" />
+
+    <fragment
         android:id="@+id/nav_gallery"
         android:name="com.sc703.proyecto.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
