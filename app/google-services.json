@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "486061206595",
+    "project_id": "proyecto-feee2",
+    "storage_bucket": "proyecto-feee2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486061206595:android:095102bee76d17d27d78f6",
+        "android_client_info": {
+          "package_name": "com.sc703.proyecto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486061206595-4n4op3h57ndvasfkrmjhsl429cppfkh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHUW6Oh6oY7GtHFx3uzeiPttEaqkimAAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486061206595-4n4op3h57ndvasfkrmjhsl429cppfkh4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
