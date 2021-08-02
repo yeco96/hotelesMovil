@@ -40,38 +40,55 @@ class MainActivity : AppCompatActivity() {
         val correo = edt_correo.text.toString()
         val contrasena = edt_contrasena.text.toString()
 
-        ValidarContrasena()
-        ValidarCorreo()
-
-        Autenticador.createUserWithEmailAndPassword(correo, contrasena)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    val User = Autenticador.currentUser
-                    Toast.makeText(applicationContext, "Creación de usuario exitosa", Toast.LENGTH_SHORT).show()
-                    ActualizarInterfaz(User)
-                } else {
-                    Toast.makeText(applicationContext, "Creación de usuario fallida", Toast.LENGTH_SHORT).show()
+        if (ValidarContrasena() && ValidarCorreo()) {
+            Autenticador.createUserWithEmailAndPassword(correo, contrasena)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        val User = Autenticador.currentUser
+                        Toast.makeText(
+                            applicationContext,
+                            "Creación de usuario exitosa",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        ActualizarInterfaz(User)
+                    } else {
+                        Toast.makeText(
+                            applicationContext,
+                            "Creación de usuario fallida",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
-            }
+        }
+
+
     }
 
     fun Ingreso(view: View?) {
         val correo = edt_correo.text.toString()
         val contrasena = edt_contrasena.text.toString()
 
-        ValidarContrasena()
-        ValidarCorreo()
-
-        Autenticador.signInWithEmailAndPassword(correo, contrasena)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    val User = Autenticador.currentUser
-                    Toast.makeText(applicationContext, "Inicio de sesion correcto", Toast.LENGTH_SHORT).show()
-                    ActualizarInterfaz(User)
-                } else {
-                    Toast.makeText(applicationContext, "Inicio de sesion fallido", Toast.LENGTH_SHORT).show()
+        if (ValidarContrasena() && ValidarCorreo()) {
+            Autenticador.signInWithEmailAndPassword(correo, contrasena)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        val User = Autenticador.currentUser
+                        Toast.makeText(
+                            applicationContext,
+                            "Inicio de sesion correcto",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        ActualizarInterfaz(User)
+                    } else {
+                        Toast.makeText(
+                            applicationContext,
+                            "Inicio de sesion fallido",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
                 }
-            }
+        }
+
     }
 
     override fun onStart() {
@@ -94,7 +111,8 @@ class MainActivity : AppCompatActivity() {
                 "(?=.*[!@#$%&*+=.])" +
                 "(?=\\S+$)" +
                 ".{6,18}" +
-                "$")
+                "$"
+    )
 
     private fun ValidarCorreo(): Boolean {
         val Correo = edt_correo.text.toString().trim { it <= ' ' }
@@ -102,7 +120,8 @@ class MainActivity : AppCompatActivity() {
             edt_correo.error = "Debe digitar un correo electronico"
             false
         } else if (!Patterns.EMAIL_ADDRESS.matcher(Correo).matches()) {
-            edt_correo.error = "El correo digitado no tiene el formato correcto. Utilice alguien@correo.com"
+            edt_correo.error =
+                "El correo digitado no tiene el formato correcto. Utilice alguien@correo.com"
             false
         } else {
             edt_correo.error = null
@@ -116,7 +135,8 @@ class MainActivity : AppCompatActivity() {
             edt_contrasena.error = "Debe digitar una contraseña"
             false
         } else if (!PASSWORD_PATTERN.matcher(Contrasena).matches()) {
-            edt_contrasena.error = "La contraseña debe contener Mayusculas,minusculas, caracteres especiales y números"
+            edt_contrasena.error =
+                "La contraseña debe contener Mayusculas,minusculas, caracteres especiales y números"
             false
         } else {
             edt_contrasena.error = null
@@ -124,18 +144,32 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun SolicitarPermisos(){
-        val GPS = ActivityCompat.checkSelfPermission(this@MainActivity, android.Manifest.permission.ACCESS_FINE_LOCATION)
-        val Telefono = ActivityCompat.checkSelfPermission(this@MainActivity, android.Manifest.permission.CALL_PHONE)
-        val Internet = ActivityCompat.checkSelfPermission(this@MainActivity, android.Manifest.permission.INTERNET)
+    private fun SolicitarPermisos() {
+        val GPS = ActivityCompat.checkSelfPermission(
+            this@MainActivity,
+            android.Manifest.permission.ACCESS_FINE_LOCATION
+        )
+        val Telefono = ActivityCompat.checkSelfPermission(
+            this@MainActivity,
+            android.Manifest.permission.CALL_PHONE
+        )
+        val Internet = ActivityCompat.checkSelfPermission(
+            this@MainActivity,
+            android.Manifest.permission.INTERNET
+        )
 
-        if(GPS != PackageManager.PERMISSION_GRANTED ||
+        if (GPS != PackageManager.PERMISSION_GRANTED ||
             Telefono != PackageManager.PERMISSION_GRANTED ||
-            Internet != PackageManager.PERMISSION_GRANTED){
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-                requestPermissions(arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION,
-                    android.Manifest.permission.CALL_PHONE,
-                    android.Manifest.permission.INTERNET),Codigo_Solicitud)
+            Internet != PackageManager.PERMISSION_GRANTED
+        ) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                requestPermissions(
+                    arrayOf(
+                        android.Manifest.permission.ACCESS_FINE_LOCATION,
+                        android.Manifest.permission.CALL_PHONE,
+                        android.Manifest.permission.INTERNET
+                    ), Codigo_Solicitud
+                )
             }
         }
 

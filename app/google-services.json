@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "486061206595",
-    "project_id": "proyecto-feee2",
-    "storage_bucket": "proyecto-feee2.appspot.com"
+    "project_number": "549721971897",
+    "project_id": "hotelmovil-40dbe",
+    "storage_bucket": "hotelmovil-40dbe.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:486061206595:android:095102bee76d17d27d78f6",
+        "mobilesdk_app_id": "1:549721971897:android:fe47ea167c20ba75658f68",
         "android_client_info": {
           "package_name": "com.sc703.proyecto"
         }
       },
       "oauth_client": [
         {
-          "client_id": "486061206595-4n4op3h57ndvasfkrmjhsl429cppfkh4.apps.googleusercontent.com",
+          "client_id": "549721971897-41ev8kfd7k8h5p3ogu2gkavs5ll8vk80.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAHUW6Oh6oY7GtHFx3uzeiPttEaqkimAAE"
+          "current_key": "AIzaSyC59ED3n7WM6N_eGObZBNH-bklMAkSSf64"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "486061206595-4n4op3h57ndvasfkrmjhsl429cppfkh4.apps.googleusercontent.com",
+              "client_id": "549721971897-41ev8kfd7k8h5p3ogu2gkavs5ll8vk80.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
