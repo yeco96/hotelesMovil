@@ -13,31 +13,40 @@ import com.google.firebase.database.ValueEventListener
 import com.sc703.proyecto.R
 
 class SoporteFragment : Fragment() {
-    lateinit var txt_realtime: TextView
+    lateinit var txt_telefono: TextView
+    lateinit var txt_correo: TextView
     private val FBDB = FirebaseDatabase.getInstance()
     private val DBref = FBDB.reference
-    private val Noticias = DBref.child("Hotel1")
+    private val txt_telefonoBD = DBref.child("txt_telefono")
+    private val txt_correoBD = DBref.child("txt_correo")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val root = inflater.inflate(R.layout.fragment_soporte,container,false)
-        txt_realtime = root.findViewById(R.id.txt_realtime)
+        txt_telefono = root.findViewById(R.id.txt_telefono)
+        txt_correo = root.findViewById(R.id.txt_correo)
         return root
     }
 
     override fun onStart() {
         super.onStart()
 
-        //Utilizamos el evento listener de nuestra noticia para ver si se modifica su valor
-        Noticias.addValueEventListener(object : ValueEventListener {
+        txt_telefonoBD.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                txt_realtime.text = "soprte" + snapshot.value.toString()
+                txt_telefono.text = snapshot.value.toString()
             }
-
             override fun onCancelled(error: DatabaseError) {
-                txt_realtime.text  = "Se produjo un error en la conexion a la BD"
+                txt_telefono.text  = "Sin Datos"
             }
+        })
 
+        txt_correoBD.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                txt_correo.text = snapshot.value.toString()
+            }
+            override fun onCancelled(error: DatabaseError) {
+                txt_correo.text  = "Sin Datos"
+            }
         })
     }
 
