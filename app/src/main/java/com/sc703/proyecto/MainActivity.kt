@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var edt_correo: EditText
     private lateinit var edt_contrasena: EditText
-
+//
     private lateinit var Autenticador: FirebaseAuth
 
     private val Codigo_Solicitud = 1234
