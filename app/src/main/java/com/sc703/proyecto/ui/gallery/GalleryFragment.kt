@@ -22,14 +22,6 @@ import java.io.File
 import java.io.IOException
 
 class GalleryFragment : Fragment() {
-
-    private lateinit var galleryViewModel: GalleryViewModel
-    private var _binding: FragmentGalleryBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
     private lateinit var imv_imagen: ImageView
     private lateinit var edt_NombreImag: EditText
     private lateinit var btn_Buscar: Button
@@ -44,7 +36,6 @@ class GalleryFragment : Fragment() {
 
     //Asignamos un ID al proceso de busqueda
     private val ID_Proceso = 1234
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
