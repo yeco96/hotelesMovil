@@ -22,6 +22,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.sc703.proyecto.R
 import kotlinx.android.synthetic.main.fragment_hoteles.*
+import kotlinx.android.synthetic.main.fragment_hoteles.view.*
 import java.io.File
 import java.io.IOException
 
@@ -43,23 +44,17 @@ class HotelesFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?): View? {
-        val root = inflater.inflate(R.layout.fragment_hoteles,container,false)
+        val view = inflater.inflate(R.layout.fragment_hoteles,container,false)
 
-        //initRecycler()
+        view.rvHoteles.layoutManager = LinearLayoutManager(context)
+        view.rvHoteles.adapter = HotelAdapter(hoteles)
 
-        /*MobileAds.initialize(context){}
+        MobileAds.initialize(context){}
         val solicitud_Anuncio = AdRequest.Builder().build()
-        av_Banner = findViewById(R.id.av_Banner)
-        av_Banner.loadAd(solicitud_Anuncio)*/
+        av_Banner = view.findViewById(R.id.av_Banner)
+        av_Banner.loadAd(solicitud_Anuncio)
 
-        return root
+        return view
     }
-
-    fun initRecycler(){
-        rvHoteles.layoutManager = LinearLayoutManager(context)
-        val adapter = HotelAdapter(hoteles)
-        rvHoteles.adapter = adapter
-    }
-
 
 }

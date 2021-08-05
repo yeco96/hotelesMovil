@@ -9,18 +9,16 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvHoteles"
         android:layout_width="match_parent"
-        android:layout_height="666dp" />
+        android:layout_height="600dp" />
 
     <com.google.android.gms.ads.AdView
-        android:layout_marginTop="665dp"
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/av_Banner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        ads:adSize="SMART_BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
-    </com.google.android.gms.ads.AdView>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
 
 </FrameLayout>
