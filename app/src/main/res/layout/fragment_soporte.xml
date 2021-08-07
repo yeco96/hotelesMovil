@@ -8,17 +8,16 @@
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="326dp"
+        android:layout_height="41dp"
         android:text="CONTACTO"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168" />
+        app:layout_constraintVertical_bias="0.167" />
 
     <TextView
         android:layout_width="match_parent"
@@ -33,39 +32,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.303" />
 
-    <TextView
-        android:id="@+id/txt_telefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.354" />
 
-    <TextView
-        android:id="@+id/txt_correo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+    <RelativeLayout
+        android:id="@+id/headerLinearLay"
+        android:layout_width="296dp"
+        android:layout_height="30dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.548" />
+        app:layout_constraintVertical_bias="0.353">
+
+        <ImageButton
+            android:id="@+id/avatarImagellamar"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="#4CAF50"
+            android:src="@android:drawable/stat_sys_phone_call" />
+
+        <TextView
+            android:id="@+id/txt_telefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toRightOf="@id/avatarImagellamar"
+            android:paddingLeft="4dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -79,6 +78,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498" />
+
+
+    <RelativeLayout
+        android:id="@+id/headerLineaCorreo"
+        android:layout_width="296dp"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568">
+
+        <ImageButton
+            android:id="@+id/avatarImageViewCorreo"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="#4CAF50"
+            android:src="@android:drawable/ic_dialog_email" />
+
+        <TextView
+            android:id="@+id/txt_correo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toRightOf="@id/avatarImageViewCorreo"
+            android:paddingLeft="4dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="precione sobre cada icono para redireccionar"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
