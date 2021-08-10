@@ -31,14 +31,14 @@ class HotelesFragment : Fragment() {
     private lateinit var av_Banner: AdView
 
     val hoteles = listOf(
-        Hotel("Best Western Jaco Beach All Inclusive Resort", "Jacó, Costa Rica", "¢ 76.236", "https://cf.bstatic.com/xdata/images/hotel/max1024x768/108251013.jpg?k=18fa0a0484d18d6ee3ccf60f8c877b94fb458be403a590d2ddbc25537d18a692&o=&hp=1"),
-        Hotel("Arenal Paraíso Resort & Spa", "Fortuna, Costa Rica", "¢ 64.494", "https://cf.bstatic.com/xdata/images/hotel/max1024x768/294465101.jpg?k=b4f88fb7b45b49d995c178784be5d0894a866923c58309107747ab41cddbbf6e&o=&hp=1"),
-        Hotel("Hotel Manuel Antonio", "Manuel Antonio, Costa Rica", "CR 49.464", "https://cf.bstatic.com/xdata/images/hotel/max1024x768/151957467.jpg?k=6b5dc458311efe08f8bbdde0a411d206195ef35f6f7751f8c224377c6323e972&o=&hp=1"),
-        Hotel("Occidental Tamarindo All Inclusive", "Tamarindo, Costa Rica", "¢ 68.823", "https://cf.bstatic.com/xdata/images/hotel/max1024x768/194573716.jpg?k=92622b4a766af788f1fea76611be700cea77303dc876079625a7106555f0287f&o=&hp=1"),
-        Hotel("Los Sueños Marriott Ocean & Golf Resort", "Jacó, Costa Rica", "¢ 66.301", "https://cf.bstatic.com/xdata/images/hotel/max1024x768/65894916.jpg?k=17a8e467251c6e09a8b24b241b3adc39190620658c9266a7a0bb333e69d06292&o=&hp=1"),
-        Hotel("Les Voiles Blanches", "Tamarindo, Costa Rica", "¢ 76,477", "https://cf.bstatic.com/xdata/images/hotel/max1024x768/272994896.jpg?k=cf9690197394e0bdb14b71b24e5e875951b09968f4ea707204b927767f90770b&o=&hp=1"),
-        Hotel("Hotel Los Lagos Spa & Resort", "Fortuna, Costa Rica", "¢ 82.252", "https://cf.bstatic.com/xdata/images/hotel/max1024x768/285751963.jpg?k=d76f7eebd1ec2bba5dbc59ffbea8bb7b9548c0a4c1963b0502d0c2aaf5c4978b&o=&hp=1"),
-        Hotel("Blue Banyan Inn", "Quepos, Costa Rica", "¢ 68.013", "https://cf.bstatic.com/xdata/images/hotel/max1024x768/16577688.jpg?k=703fc6a0cae47c7d2e1faaf577062d3f3d2579fad971315b3f4bd50c9ad948ec&o=&hp=1")
+        Hotel("Best Western Jaco Beach All Inclusive Resort", "Jacó, Costa Rica", "¢ 76.236", "https://gocrein.com/wp-content/uploads/2020/10/94144093_3110521055635006_8476768203819712512_o.jpg"),
+        Hotel("Hotel Los Lagos Spa & Resort", "Fortuna, Costa Rica", "¢ 82.252", "https://fastly.4sqi.net/img/general/200x200/64930688_Kw6lrWCD2Uy7asDWjG64bhBGpaT1pX6w6kXI4ppF-yY.jpg"),
+        Hotel("Occidental Tamarindo All Inclusive", "Tamarindo, Costa Rica", "¢ 68.823", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGxZGQkPK2N_qbbkb2XMG7mD1kdCbOcU1FZw&usqp=CAU"),
+        Hotel("Los Sueños Marriott Ocean & Golf Resort", "Jacó, Costa Rica", "¢ 66.301", "https://foto.hrsstatic.com/fotos/3/2/1280/1280/100/FFFFFF/http%3A%2F%2Ffoto-origin.hrsstatic.com%2Ffoto%2F1%2F1%2F1%2F1%2F111165%2F111165_u_26639577.jpg/k5ls%2BYLuLltq3TblXOSWng%3D%3D/1024%2C683/6/Marriott_Vacation_Club_at_Los_Suenos-Los_Chiles-Info-27-111165.jpg"),
+        Hotel("Les Voiles Blanches", "Tamarindo, Costa Rica", "¢ 76,477", "https://foto.hrsstatic.com/fotos/0/2/1280/1280/100/FFFFFF/http%3A%2F%2Ffoto-origin.hrsstatic.com%2Ffoto%2F9%2F4%2F2%2F5%2F942556%2F942556_um_19316871.jpg/qHKO%2BZ6cYYv%2BfbuCpWGOPA%3D%3D/500%2C331/6/Les_Voiles_Blanches_BB-Tamarindo-Surroundings-942556.jpg"),
+        Hotel("Hotel Manuel Antonio", "Manuel Antonio, Costa Rica", "CR 49.464", "https://www.instantworldbooking.com/services/reservation/display_pic.php?im=hotellacolina_manuelantonio_outoceaside72.jpg&pth=https%3A%2F%2Fwww.instantworldbooking.com%2Fdirectory%2FCosta_Rica%2Fimg%2F&w=1200&h=900&req_w=1200&qu=85&crophr=1.10"),
+        Hotel("Arenal Paraíso Resort & Spa", "Fortuna, Costa Rica", "¢ 64.494", "https://foto.hrsstatic.com/fotos/3/2/1280/1280/100/FFFFFF/http%3A%2F%2Ffoto-origin.hrsstatic.com%2Ffoto%2F4%2F1%2F7%2F5%2F417592%2F417592_b_7910785.jpg/HyT%2BzncsvSS%2BhQmrDN0DRA%3D%3D/1024%2C768/6/Arenal_Paraiso_Resort_and_Spa-Fortuna-Hotel_bar-417592.jpg"),
+        Hotel("Blue Banyan Inn", "Quepos, Costa Rica", "¢ 68.013", "https://cdn.ostrovok.ru/t/240x240/content/30/ee/30ee34a8c94e70b7c53ac4744cfb222755863075.jpeg")
 
     )
 
