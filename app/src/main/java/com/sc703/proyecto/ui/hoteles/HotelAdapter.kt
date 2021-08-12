@@ -35,7 +35,7 @@ class HotelAdapter (val hotel:List<Hotel>): RecyclerView.Adapter<HotelAdapter.Ho
             //view.setOnClickListener { Toast.makeText(view.context, "Has seleccionado a ${hotel.nombre}", Toast.LENGTH_SHORT).show() }
 
             view.setOnClickListener {
-                val uri: Uri = Uri.parse(hotel.imagen)
+                val uri: Uri = Uri.parse(hotel.url)
                 val intent = Intent(Intent.ACTION_VIEW, uri)
                 view.context.startActivity(intent)
             }

@@ -4,5 +4,6 @@ data class Hotel(
     val nombre: String,
     val ubicacion: String,
     val precio: String,
-    val imagen: String
+    val imagen: String,
+    val url: String
 )
