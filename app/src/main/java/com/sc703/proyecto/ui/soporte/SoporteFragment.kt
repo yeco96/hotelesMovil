@@ -51,7 +51,7 @@ class SoporteFragment : Fragment() {
         txt_telefonoBD.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 txt_telefono.text = snapshot.value.toString()
-                avatarImagellamar.setOnClickListener(View.OnClickListener { Llamar("tel:" + snapshot.value.toString()) })
+                avatarImagellamar.setOnClickListener( { Llamar("tel:" + snapshot.value.toString()) })
             }
             override fun onCancelled(error: DatabaseError) {
                 txt_telefono.text  = "Sin Datos"
