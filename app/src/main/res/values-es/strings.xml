@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="UsuerPhone">Telefono</string>
+    <string name="Name">Nombre</string>
+    <string name="email">Email</string>
+    <string name="btn_Save">Guardar</string>
+    <string name="Storage_Name">Nombre</string>
     <string name="app_name">Proyecto</string>
     <string name="action_settings">Configuracion</string>
     <string name="menu_gallery">Galeria</string>

@@ -34,6 +34,7 @@
     <string name="btn_login">Login</string>
 
     <!--  Storage  -->
+    <string name="Storage_Name">Name</string>
     <string name="Storage_Image_name">Image name</string>
     <string name="Storage_Image_name_hint">Enter the image name</string>
     <string name="Storage_Image_select">Please select an image</string>
@@ -46,6 +47,10 @@
     <string name="btn_find">Search</string>
     <string name="btn_upload">Upload</string>
     <string name="btn_Download">Download</string>
+    <string name="btn_Save">Save</string>
+    <string name="UsuerPhone">Enter phone number</string>
+    <string name="Name">Enter Name</string>
+    <string name="email">Enter email</string>
 
     <!--  Support   -->
     <string name="Support_Contact">Contact</string>
