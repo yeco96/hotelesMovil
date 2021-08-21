@@ -15,7 +15,7 @@
         <activity
             android:name=".ActivityPrincipal"
             android:label="@string/title_activity_principal"
-            android:theme="@style/Theme.Proyecto.NoActionBar"></activity>
+            android:theme="@style/Theme.Proyecto.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.sc703.proyecto.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_Perfil"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment

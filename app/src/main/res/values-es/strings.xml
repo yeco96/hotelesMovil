@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="menu_Perfil">Perfil</string>
     <string name="UsuerPhone">Telefono</string>
     <string name="Name">Nombre</string>
     <string name="email">Email</string>
@@ -7,7 +8,6 @@
     <string name="Storage_Name">Nombre</string>
     <string name="app_name">Proyecto</string>
     <string name="action_settings">Configuracion</string>
-    <string name="menu_gallery">Galeria</string>
     <string name="menu_salir">Salir</string>
     <string name="menu_hoteles">Hoteles</string>
     <string name="menu_soporte">Soporte</string>

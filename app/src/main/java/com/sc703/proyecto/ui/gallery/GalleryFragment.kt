@@ -21,7 +21,6 @@ import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.google.gson.Gson
 import com.sc703.proyecto.R
 import java.io.File
 import java.io.IOException
