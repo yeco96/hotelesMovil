@@ -28,19 +28,17 @@ import java.io.IOException
 
 class GalleryFragment : Fragment() {
 
-    private lateinit var employeeNameEdt: EditText
-    private lateinit var employeePhoneEdt: EditText
-    private lateinit var employeeAddressEdt: EditText
+    private lateinit var NameEdt: EditText
+    private lateinit var PhoneEdt: EditText
+    private lateinit var AddressEdt: EditText
 
     private lateinit var database: DatabaseReference
     private lateinit var usuario: Usuario
 
 
     private lateinit var imv_imagen: ImageView
-    private lateinit var edt_NombreImag: EditText
     private lateinit var btn_Buscar: Button
     private lateinit var btn_Cargar: Button
-    private lateinit var btn_Descargar: Button
     private lateinit var btn_Save: Button
 
 
@@ -55,20 +53,17 @@ class GalleryFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_gallery, container, false)
 
         imv_imagen = root.findViewById(R.id.imv_Imagen)
-        edt_NombreImag = root.findViewById(R.id.edt_NombreImg)
         btn_Buscar = root.findViewById(R.id.btn_Buscar)
         btn_Cargar = root.findViewById(R.id.btn_Cargar)
-        btn_Descargar = root.findViewById(R.id.btn_Descargar)
         btn_Save = root.findViewById(R.id.btn_Save)
 
         btn_Buscar.setOnClickListener { v -> BuscarArchivo(v) }
         btn_Cargar.setOnClickListener { v -> CargarArchivo(v) }
-        btn_Descargar.setOnClickListener { DescargaArchivo() }
         btn_Save.setOnClickListener { Save() }
 
-        employeeNameEdt = root.findViewById(R.id.idEdtName)
-        employeePhoneEdt = root.findViewById(R.id.idEdtPhoneNumber)
-        employeeAddressEdt = root.findViewById(R.id.idEdtAddress)
+        NameEdt = root.findViewById(R.id.idEdtName)
+        PhoneEdt = root.findViewById(R.id.idEdtPhoneNumber)
+        AddressEdt = root.findViewById(R.id.idEdtAddress)
 
         database = Firebase.database.reference
         usuario = Usuario()
@@ -76,21 +71,23 @@ class GalleryFragment : Fragment() {
         val user = Firebase.auth.currentUser
         user?.let {
             usuario.id = user.uid
-            employeeAddressEdt.setText(user.email)
+            AddressEdt.setText(user.email)
         }
         database.child("users").child(usuario.id).child("dataUser")
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     usuario = snapshot.getValue<Usuario>()!!
-                    employeeNameEdt.setText(usuario.name.toString())
-                    employeePhoneEdt.setText(usuario.telefono.toString())
-                    employeeAddressEdt.setText(usuario.correo.toString())
+                    NameEdt.setText(usuario.name.toString())
+                    PhoneEdt.setText(usuario.telefono.toString())
+                    AddressEdt.setText(usuario.correo.toString())
                 }
 
                 override fun onCancelled(error: DatabaseError) {
 
                 }
             })
+
+        DescargaArchivo()
 
         return root
     }
@@ -115,9 +112,9 @@ class GalleryFragment : Fragment() {
     }
 
     private fun Save() {
-        val name: String = employeeNameEdt.text.toString()
-        val phone: String = employeePhoneEdt.text.toString()
-        val address: String = employeeAddressEdt.text.toString()
+        val name: String = NameEdt.text.toString()
+        val phone: String = PhoneEdt.text.toString()
+        val address: String = AddressEdt.text.toString()
 
         if (TextUtils.isEmpty(name) && TextUtils.isEmpty(phone) && TextUtils.isEmpty(address)) {
             Toast.makeText(context, "Please add some data.", Toast.LENGTH_SHORT).show()
@@ -165,7 +162,13 @@ class GalleryFragment : Fragment() {
         dialogo.setTitle(R.string.Storage_upload)
         dialogo.show()
 
-        val ref = Almacenamiento.child(edt_NombreImag.text.toString())
+
+        val user = Firebase.auth.currentUser
+        user?.let {
+            usuario.id = user.uid
+        }
+
+        val ref = Almacenamiento.child(usuario.id.toString())
         ref.putFile(RutaIMG)
             .addOnSuccessListener {
                 dialogo.dismiss()
@@ -184,9 +187,15 @@ class GalleryFragment : Fragment() {
 
     //Funcion para descargar las imagenes del Stotrage de Firebase
     private fun DescargaArchivo() {
+
+        val user = Firebase.auth.currentUser
+        user?.let {
+            usuario.id = user.uid
+        }
+
         //Asignamos la ruta de la imagen a descargar
         Almacenamiento = FirebaseStorage.getInstance().reference.child(
-            "Imagenes/" + edt_NombreImag.text.toString()
+            "Imagenes/" + usuario.id.toString()
         )
 
         lateinit var temporal: File

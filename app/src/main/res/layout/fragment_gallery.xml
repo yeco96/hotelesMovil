@@ -25,17 +25,17 @@
                 android:layout_height="150dp" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Storage_Image_name"
-            android:textSize="18sp"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/Storage_Image_name"-->
+<!--            android:textSize="18sp"/>-->
 
-        <EditText
-            android:id="@+id/edt_NombreImg"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/Storage_Image_name_hint" />
+<!--        <EditText-->
+<!--            android:id="@+id/edt_NombreImg"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="@string/Storage_Image_name_hint" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,13 +57,13 @@
                 android:paddingEnd="10dp"
                 android:text="@string/btn_upload"
                 android:layout_margin="10dp"/>
-            <Button
-                android:id="@+id/btn_Descargar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp"
-                android:text="@string/btn_Download" />
+<!--            <Button-->
+<!--                android:id="@+id/btn_Descargar"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingStart="10dp"-->
+<!--                android:paddingEnd="10dp"-->
+<!--                android:text="@string/btn_Download" />-->
         </LinearLayout>
 
 <!--        DATOS-->
