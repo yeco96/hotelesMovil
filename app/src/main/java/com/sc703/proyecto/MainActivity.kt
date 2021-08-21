@@ -47,14 +47,14 @@ class MainActivity : AppCompatActivity() {
                         val User = Autenticador.currentUser
                         Toast.makeText(
                             applicationContext,
-                            "Creación de usuario exitosa",
+                            R.string.Login_usr_logon,
                             Toast.LENGTH_SHORT
                         ).show()
                         ActualizarInterfaz(User)
                     } else {
                         Toast.makeText(
                             applicationContext,
-                            "Creación de usuario fallida",
+                            R.string.Login_usr_logon_failed,
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -75,14 +75,14 @@ class MainActivity : AppCompatActivity() {
                         val User = Autenticador.currentUser
                         Toast.makeText(
                             applicationContext,
-                            "Inicio de sesion correcto",
+                            R.string.Login_usr_login,
                             Toast.LENGTH_SHORT
                         ).show()
                         ActualizarInterfaz(User)
                     } else {
                         Toast.makeText(
                             applicationContext,
-                            "Inicio de sesion fallido",
+                            R.string.Login_usr_login_failed,
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         val User = Autenticador.currentUser
-        Toast.makeText(applicationContext, "Inicio de sesion correcto", Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext, R.string.Login_usr_login, Toast.LENGTH_SHORT).show()
         ActualizarInterfaz(User)
     }
 
@@ -117,11 +117,11 @@ class MainActivity : AppCompatActivity() {
     private fun ValidarCorreo(): Boolean {
         val Correo = edt_correo.text.toString().trim { it <= ' ' }
         return if (Correo.isEmpty()) {
-            edt_correo.error = "Debe digitar un correo electronico"
+            edt_correo.error = R.string.Login_email_verification.toString()
             false
         } else if (!Patterns.EMAIL_ADDRESS.matcher(Correo).matches()) {
             edt_correo.error =
-                "El correo digitado no tiene el formato correcto. Utilice alguien@correo.com"
+                R.string.Login_email_verification_format.toString()
             false
         } else {
             edt_correo.error = null
@@ -132,11 +132,11 @@ class MainActivity : AppCompatActivity() {
     private fun ValidarContrasena(): Boolean {
         val Contrasena = edt_contrasena.text.toString().trim { it <= ' ' }
         return if (Contrasena.isEmpty()) {
-            edt_contrasena.error = "Debe digitar una contraseña"
+            edt_contrasena.error = R.string.Login_password_verification.toString()
             false
         } else if (!PASSWORD_PATTERN.matcher(Contrasena).matches()) {
             edt_contrasena.error =
-                "La contraseña debe contener Mayusculas,minusculas, caracteres especiales y números"
+                R.string.Login_password_verification_format.toString()
             false
         } else {
             edt_contrasena.error = null

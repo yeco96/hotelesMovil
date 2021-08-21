@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Proyecto</string>
+    <string name="action_settings">Configuracion</string>
+    <string name="menu_gallery">Galeria</string>
+    <string name="menu_salir">Salir</string>
+    <string name="menu_hoteles">Hoteles</string>
+    <string name="menu_soporte">Soporte</string>
+    <string name="Login_email">Correo:</string>
+    <string name="Login_email_hint">Ingrese su correo</string>
+    <string name="Login_pass">Contraseña</string>
+    <string name="Login_pass_hint">Ingrese su contraseña</string>
+    <string name="Login_usr_logon">El usuario se creo de forma exitosa</string>
+    <string name="Login_usr_logon_failed">El usuario no se pudo crear</string>
+    <string name="Login_usr_login">Inicio de sesion completado</string>
+    <string name="Login_usr_login_failed">No se pudo iniciar sesion</string>
+    <string name="Login_email_verification">Por favor ingrese una direecion de correo electronico valida</string>
+    <string name="Login_email_verification_format">El correo ingresado no es valido</string>
+    <string name="Login_password_verification">Por favor ingrese una contraseña valida</string>
+    <string name="Login_password_verification_format">La contraseña ingresada no es valida</string>
+    <string name="btn_register">Registro</string>
+    <string name="btn_login">Iniciar</string>
+    <string name="Storage_Image_name">Nombre de la Imagen</string>
+    <string name="Storage_Image_name_hint">Ingrese el nombre de la imagen</string>
+    <string name="Storage_Image_select">"Seleccion una imagen "</string>
+    <string name="Storage_Image_select_fail">"No se pudo seleccionar la imagen "</string>
+    <string name="Storage_upload">"Progreso de carga "</string>
+    <string name="Storage_upload_succes">Carga completada de forma exitosa</string>
+    <string name="Storage_upload_fail">"La carga no se pudo completar "</string>
+    <string name="Storage_upload_notfound">"No se pudo encontrar la imagen "</string>
+    <string name="Storage_download_fail">Descarga fallida</string>
+    <string name="btn_find">Buscar</string>
+    <string name="btn_upload">Cargar</string>
+    <string name="btn_Download">Descargar</string>
+    <string name="Support_Contact">Contacto</string>
+    <string name="Support_Phone">Telefono</string>
+    <string name="Support_Email">Correo</string>
+    <string name="Support_Message">Precione sobre el icono para redireccionar</string>
+    <string name="Support_Send_email">"Enviar correo "</string>
+    <string name="Support_Send_email_fail">"No se encontraron aplicaciones de correo "</string>
+    <string name="Exit_Message">Presione el boton para cerrar sesion</string>
+    <string name="Exit_Disconnecting">Desconectando</string>
+    <string name="btn_Logout">Cerra Sesion</string>
+</resources>

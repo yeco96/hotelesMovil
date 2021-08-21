@@ -85,9 +85,9 @@ class SoporteFragment : Fragment() {
         email.putExtra(Intent.EXTRA_TEXT, Mensaje)
 
         try {
-            startActivity(Intent.createChooser(email,"Enviar correo"))
+            startActivity(Intent.createChooser(email,R.string.Support_Send_email.toString()))
         }catch (e: ActivityNotFoundException){
-            Toast.makeText(context,"No se encontró ninguna app de correo", Toast.LENGTH_SHORT)
+            Toast.makeText(context,R.string.Support_Send_email_fail, Toast.LENGTH_SHORT)
                 .show()
         }
     }

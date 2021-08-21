@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="326dp"
         android:layout_height="41dp"
-        android:text="CONTACTO"
+        android:text="@string/Support_Contact"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +22,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Teléfono"
+        android:text="@string/Support_Phone"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,7 +69,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Correo"
+        android:text="@string/Support_Email"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -117,7 +117,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="precione sobre cada icono para redireccionar"
+        android:text="@string/Support_Message"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

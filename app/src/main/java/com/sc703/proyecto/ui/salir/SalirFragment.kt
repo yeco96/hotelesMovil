@@ -25,7 +25,7 @@ class SalirFragment : Fragment() {
 
         btn_Salir.setOnClickListener(View.OnClickListener {
             FirebaseAuth.getInstance().signOut()
-            Toast.makeText(context,"Desconectando", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,R.string.Exit_Disconnecting, Toast.LENGTH_SHORT).show()
             val intent = Intent(activity,MainActivity::class.java)
             startActivity(intent)
         })

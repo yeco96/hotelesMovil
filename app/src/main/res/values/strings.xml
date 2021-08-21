@@ -1,17 +1,63 @@
 <resources>
     <string name="app_name">Proyecto</string>
-    <string name="title_activity_principal">ActivityPrincipal</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_principal" translatable="false">ActivityPrincipal</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
+    <!--  MENU  -->
+
+    <string name="menu_home" translatable="false">Home</string>
     <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_salir">Salir</string>
-    <string name="menu_hoteles">Hoteles</string>
-    <string name="menu_soporte">Soporte</string>
+    <string name="menu_slideshow" translatable="false">Slideshow</string>
+    <string name="menu_salir">Exit</string>
+    <string name="menu_hoteles">Hotels</string>
+    <string name="menu_soporte">Support</string>
+
+    <!--  Login  -->
+    <string name="Login_email">Email:</string>
+    <string name="Login_email_hint">Enter your email</string>
+    <string name="Login_pass">Password:</string>
+    <string name="Login_pass_hint">Enter your password</string>
+    <string name="Login_usr_logon">User created succesfully</string>
+    <string name="Login_usr_logon_failed">User was not created succesfully</string>
+    <string name="Login_usr_login">Authentication succesfully completed</string>
+    <string name="Login_usr_login_failed">Authentication was not succesfully completed</string>
+    <string name="Login_email_verification">Please enter a valid email address</string>
+    <string name="Login_email_verification_format">The entered email address is not valid</string>
+    <string name="Login_password_verification">Please enter a valid password</string>
+    <string name="Login_password_verification_format">The entered password is not valid</string>
+    <string name="btn_register">Register</string>
+    <string name="btn_login">Login</string>
+
+    <!--  Storage  -->
+    <string name="Storage_Image_name">Image name</string>
+    <string name="Storage_Image_name_hint">Enter the image name</string>
+    <string name="Storage_Image_select">Please select an image</string>
+    <string name="Storage_Image_select_fail">Image selection failed</string>
+    <string name="Storage_upload">Upload Progress</string>
+    <string name="Storage_upload_succes">Upload successful</string>
+    <string name="Storage_upload_fail">Upload unsuccessful</string>
+    <string name="Storage_upload_notfound">Image not found</string>
+    <string name="Storage_download_fail">Download failed</string>
+    <string name="btn_find">Search</string>
+    <string name="btn_upload">Upload</string>
+    <string name="btn_Download">Download</string>
+
+    <!--  Support   -->
+    <string name="Support_Contact">Contact</string>
+    <string name="Support_Phone">Phone</string>
+    <string name="Support_Email">Email</string>
+    <string name="Support_Message">Click over the icon for the needed redirection</string>
+    <string name="Support_Send_email">Send Email </string>
+    <string name="Support_Send_email_fail">No email apps were found</string>
+
+    <!--  Exit   -->
+    <string name="Exit_Message">Press the button below to log out</string>
+    <string name="Exit_Disconnecting">Disconnecting</string>
+    <string name="btn_Logout">Log out</string>
+
 </resources>

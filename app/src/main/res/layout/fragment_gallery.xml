@@ -18,14 +18,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre de la imagen"
+            android:text="@string/Storage_Image_name"
             android:textSize="18dp"/>
 
         <EditText
             android:id="@+id/edt_NombreImg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite un nombre" />
+            android:hint="@string/Storage_Image_name_hint" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,14 +38,14 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
-                android:text="Buscar" />
+                android:text="@string/btn_find" />
             <Button
                 android:id="@+id/btn_Cargar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
-                android:text="Cargar"
+                android:text="@string/btn_upload"
                 android:layout_margin="10dp"/>
             <Button
                 android:id="@+id/btn_Descargar"
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
-                android:text="Descargar" />
+                android:text="@string/btn_Download" />
         </LinearLayout>
 
         <LinearLayout

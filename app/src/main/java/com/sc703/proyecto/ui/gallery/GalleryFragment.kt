@@ -61,7 +61,7 @@ class GalleryFragment : Fragment() {
         intent.type = "image/*"
         intent.action = Intent.ACTION_GET_CONTENT
         startActivityForResult(
-            Intent.createChooser(intent, "Seleccione una imagen"),ID_Proceso)
+            Intent.createChooser(intent, R.string.Storage_Image_select.toString()),ID_Proceso)
     }
 
     //Funcion para obtener los datos de la imagen
@@ -74,7 +74,7 @@ class GalleryFragment : Fragment() {
             imv_imagen.setImageBitmap(bitmap)
         }catch (e: IOException){
             e.printStackTrace()
-            Toast.makeText(context,"No se pudo cargar la imagen seleccionada",
+            Toast.makeText(context,R.string.Storage_Image_select_fail.toString(),
                 Toast.LENGTH_SHORT).show()
         }
     }
@@ -84,26 +84,26 @@ class GalleryFragment : Fragment() {
         Almacenamiento = FirebaseStorage.getInstance().reference.child("Imagenes")
         if (RutaIMG != null){
             val dialogo = ProgressDialog(context)
-            dialogo.setTitle("Progreso de Carga")
+            dialogo.setTitle(R.string.Storage_upload)
             dialogo.show()
 
             val ref = Almacenamiento.child(edt_NombreImag.text.toString())
             ref.putFile(RutaIMG)
                 .addOnSuccessListener {
                     dialogo.dismiss()
-                    Toast.makeText(context,"Imagen cargada correctamente", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context,R.string.Storage_upload_succes, Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener {
                     dialogo.dismiss()
-                    Toast.makeText(context, "No se pudo cargar la imagen", Toast.LENGTH_SHORT)
+                    Toast.makeText(context, R.string.Storage_upload_fail, Toast.LENGTH_SHORT)
                         .show()
                 }
                 .addOnProgressListener { snapshot ->
                     val progreso = 100 * snapshot.bytesTransferred / snapshot.totalByteCount
-                    dialogo.setMessage("Progreso de carga " + progreso + "%")
+                    dialogo.setMessage(R.string.Storage_upload.toString() + progreso + "%")
                 }
         }else{
-            Toast.makeText(context,"No se encontro una imagen para cargar", Toast.LENGTH_SHORT)
+            Toast.makeText(context,R.string.Storage_upload_notfound, Toast.LENGTH_SHORT)
                 .show()
         }
     }
@@ -128,7 +128,7 @@ class GalleryFragment : Fragment() {
                 imv_imagen.setImageBitmap(BitmapFactory.decodeFile(imagen))
             }
             .addOnFailureListener {
-                Toast.makeText(context,"La descarga del archivo ha fallado", Toast.LENGTH_SHORT)
+                Toast.makeText(context,R.string.Storage_download_fail, Toast.LENGTH_SHORT)
                     .show()
             }
     }
