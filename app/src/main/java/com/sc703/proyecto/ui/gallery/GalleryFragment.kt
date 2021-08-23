@@ -76,10 +76,12 @@ class GalleryFragment : Fragment() {
         database.child("users").child(usuario.id).child("dataUser")
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    usuario = snapshot.getValue<Usuario>()!!
-                    NameEdt.setText(usuario.name.toString())
-                    PhoneEdt.setText(usuario.telefono.toString())
-                    AddressEdt.setText(usuario.correo.toString())
+                    if (snapshot.value != null) {
+                        usuario = snapshot.getValue<Usuario>()!!
+                        NameEdt.setText(usuario.name.toString())
+                        PhoneEdt.setText(usuario.telefono.toString())
+                        AddressEdt.setText(usuario.correo.toString())
+                    }
                 }
 
                 override fun onCancelled(error: DatabaseError) {
@@ -212,7 +214,8 @@ class GalleryFragment : Fragment() {
                 imv_imagen.setImageBitmap(BitmapFactory.decodeFile(imagen))
             }
             .addOnFailureListener {
-                Toast.makeText(context, R.string.Storage_download_fail, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(context, R.string.Storage_download_fail, Toast.LENGTH_SHORT)
+//                    .show()
             }
     }
 }
